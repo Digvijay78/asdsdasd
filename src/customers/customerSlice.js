@@ -1,7 +1,7 @@
 const initialStateCustomer = {
 
     fullName : "",
-    nationID: "",
+    nationalID: "",
     createdAt : ""
   }
 
@@ -22,11 +22,11 @@ const initialStateCustomer = {
   }
 
   export function createCustomer(fullName , nationalID) {
-    return {type : "customer/create" , payload : {fullName , nationalID , createdAt : new Date().toISOString }}
+    return {type : "customer/createCustomer" , payload : {fullName , nationalID , createdAt : new Date().toISOString }}
   }
   
   export function updateCustomer(fullName) {
-    return {type : "customer/update" , payload : {fullName}}
+    return {type : "customer/updateName" , payload : {fullName}}
   }
 
   export default customerReducer;
